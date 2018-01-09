@@ -56,4 +56,7 @@ extension ViewController {
         self.count = count
     }
 
+    private func countUp() {
+        count += 1
+    }
 }
