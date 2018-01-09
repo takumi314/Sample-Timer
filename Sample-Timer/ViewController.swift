@@ -59,4 +59,11 @@ extension ViewController {
     private func countUp() {
         count += 1
     }
+
+    private func countDown() {
+        if count < 1 {
+            return
+        }
+        count -= 1
+    }
 }
