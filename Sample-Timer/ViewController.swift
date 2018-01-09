@@ -16,10 +16,12 @@ class ViewController: UIViewController {
 
     // MARK: - Public properties
 
+    var timer: Timer?
     var count = 10
 
-    // MARK: - Initilizer
+    // MARK: - Private properties
 
+    private var interval: TimeInterval = 2.0
 
     // MARK: - Life cycle
 
@@ -51,6 +53,24 @@ extension ViewController {
     
 
     // MARK: - Private methods
+
+    private func setTimer() {
+        timer = Timer.scheduledTimer(timeInterval: interval,
+                                     target: self,
+                                     selector: #selector(onTimer),
+                                     userInfo: nil,
+                                     repeats: true)
+        displayLabel.text = String(count)
+    }
+
+    @objc private func onTimer() {
+        if count > 1 {
+            countDown()
+            displayLabel.text = String(count)
+        } else {
+            stopTimer()
+        }
+    }
 
     private func setCount(count: Int) {
         self.count = count
