@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
     @IBOutlet weak var displayLabel: UILabel!
 
+    // MARK: - Public properties
+
+
+    // MARK: - Initilizer
+
+
+    // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayLabel.text = String(0.0)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    // MARK: - Actions
 
     @IBAction func stepperOnTapped(_ sender: UIStepper) {
     }
@@ -29,5 +41,15 @@ class ViewController: UIViewController {
 
     @IBAction func onStopped(_ sender: UIButton) {
     }
+
 }
 
+extension ViewController {
+
+    // MARK: - Private properties
+    
+
+    // MARK: - Private methods
+
+
+}
