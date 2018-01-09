@@ -40,17 +40,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onStarted(_ sender: UIButton) {
+        setTimer()
     }
 
     @IBAction func onStopped(_ sender: UIButton) {
+        stopTimer()
     }
 
 }
 
 extension ViewController {
-
-    // MARK: - Private properties
-    
 
     // MARK: - Private methods
 
