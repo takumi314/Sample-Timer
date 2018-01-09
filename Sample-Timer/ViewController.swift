@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var displayLabel: UILabel!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func stepperOnTapped(_ sender: UIStepper) {
+    }
 
+    @IBAction func onStarted(_ sender: UIButton) {
+    }
+
+    @IBAction func onStopped(_ sender: UIButton) {
+    }
 }
 
