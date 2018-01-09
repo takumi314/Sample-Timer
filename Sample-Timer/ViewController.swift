@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayLabel.text = String(0.0)
+        displayLabel.text = String(count)
     }
 
     override func didReceiveMemoryWarning() {
