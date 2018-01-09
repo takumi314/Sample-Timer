@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     // MARK: - Public properties
 
+    var count = 10
 
     // MARK: - Initilizer
 
@@ -51,5 +52,8 @@ extension ViewController {
 
     // MARK: - Private methods
 
+    private func setCount(count: Int) {
+        self.count = count
+    }
 
 }
