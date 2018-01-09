@@ -72,6 +72,14 @@ extension ViewController {
         }
     }
 
+    ///
+    /// call this method when it is necessery to stop the timer immidately.
+    ///
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+
     private func setCount(count: Int) {
         self.count = count
     }
