@@ -54,6 +54,9 @@ extension ViewController {
     // MARK: - Private methods
 
     private func setTimer() {
+        if let _ = timer {
+            stopTimer()
+        }
         timer = Timer.scheduledTimer(timeInterval: interval,
                                      target: self,
                                      selector: #selector(onTimer),
