@@ -63,7 +63,7 @@ extension ViewController {
     }
 
     @objc private func onTimer() {
-        if count > 1 {
+        if count > 0 {
             countDown()
             displayLabel.text = String(count)
         } else {
