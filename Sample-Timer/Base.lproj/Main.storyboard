@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RPH-uY-vnB">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,43 +15,66 @@
             <objects>
                 <viewController id="RPH-uY-vnB" customClass="ViewController" customModule="Sample_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vic-Rc-Mzg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qIL-8u-ysW">
-                                <rect key="frame" x="140" y="228" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qIL-8u-ysW">
+                                <rect key="frame" x="286.5" y="200" width="94" height="29"/>
                                 <connections>
                                     <action selector="stepperOnTapped:" destination="RPH-uY-vnB" eventType="valueChanged" id="FM4-pJ-n4h"/>
                                 </connections>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-mD-qx5">
-                                <rect key="frame" x="107" y="312" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="onStarted:" destination="RPH-uY-vnB" eventType="touchUpInside" id="oJG-dL-en3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-3o-Ij6">
-                                <rect key="frame" x="208" y="309" width="66" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="onStopped:" destination="RPH-uY-vnB" eventType="touchUpInside" id="n7Q-Dm-RNN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-Un-LIf">
-                                <rect key="frame" x="41" y="52" width="292" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-Un-LIf">
+                                <rect key="frame" x="20" y="30" width="627" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="ffD-t8-stf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdS-p1-ddW">
+                                <rect key="frame" x="233.5" y="285" width="200" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-mD-qx5">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="onStarted:" destination="RPH-uY-vnB" eventType="touchUpInside" id="oJG-dL-en3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-3o-Ij6">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="onStopped:" destination="RPH-uY-vnB" eventType="touchUpInside" id="n7Q-Dm-RNN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="16e-0z-9XJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="4HR-Xt-idE"/>
+                                    <constraint firstItem="t4N-3o-Ij6" firstAttribute="top" secondItem="UdS-p1-ddW" secondAttribute="top" id="C3m-d6-tPt"/>
+                                    <constraint firstItem="6ba-mD-qx5" firstAttribute="width" secondItem="t4N-3o-Ij6" secondAttribute="width" id="DAe-8W-F9h"/>
+                                    <constraint firstItem="t4N-3o-Ij6" firstAttribute="height" secondItem="6ba-mD-qx5" secondAttribute="height" id="Iox-Yb-IeH"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EmR-Un-LIf" firstAttribute="top" secondItem="8KN-vt-PHG" secondAttribute="top" constant="30" id="C83-Cx-FAQ"/>
+                            <constraint firstItem="EmR-Un-LIf" firstAttribute="centerX" secondItem="Vic-Rc-Mzg" secondAttribute="centerX" id="M4Y-6g-Vvq"/>
+                            <constraint firstItem="8KN-vt-PHG" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="t4N-3o-Ij6" secondAttribute="bottom" constant="40" id="QQL-0N-l4l"/>
+                            <constraint firstItem="8KN-vt-PHG" firstAttribute="trailing" secondItem="EmR-Un-LIf" secondAttribute="trailing" constant="20" id="cg1-OK-Av7"/>
+                            <constraint firstItem="qIL-8u-ysW" firstAttribute="top" secondItem="EmR-Un-LIf" secondAttribute="bottom" constant="50" id="eb5-Vj-pjd"/>
+                            <constraint firstItem="8KN-vt-PHG" firstAttribute="bottom" secondItem="UdS-p1-ddW" secondAttribute="bottom" constant="60" id="h5r-Ye-2J6"/>
+                            <constraint firstItem="UdS-p1-ddW" firstAttribute="centerX" secondItem="Vic-Rc-Mzg" secondAttribute="centerX" id="lA4-Wn-gaI"/>
+                            <constraint firstItem="qIL-8u-ysW" firstAttribute="centerX" secondItem="Vic-Rc-Mzg" secondAttribute="centerX" id="lTN-36-LPL"/>
+                            <constraint firstItem="UdS-p1-ddW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qIL-8u-ysW" secondAttribute="bottom" constant="50" id="sHP-eB-qcd"/>
+                            <constraint firstItem="EmR-Un-LIf" firstAttribute="leading" secondItem="8KN-vt-PHG" secondAttribute="leading" constant="20" id="uvw-Ne-yH6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8KN-vt-PHG"/>
                     </view>
                     <connections>
