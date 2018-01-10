@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     // MARK: - Private properties
 
-    private var interval: TimeInterval = 2.0
+    private var interval: TimeInterval = 1.0
 
     // MARK: - Life cycle
 
