@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet weak var displayLabel: UILabel!
-
+    @IBOutlet weak var countStepper: UIStepper!
+    
     // MARK: - Public properties
 
     var timer: Timer?
