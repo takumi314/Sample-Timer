@@ -32,5 +32,42 @@ class Sample_TimerTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
+    func testCountObject_value() -> Void {
+        let count = CountValue(newValue: 10)
+        XCTAssert(count.value == 10)
+    }
+
+    func testCountObject_plus() -> Void {
+        var count = CountValue(newValue: 10)
+
+        let count_plus_one = count.plusOne()
+
+        XCTAssert(count_plus_one.value == 11)
+    }
+
+    func testCountObject_minus() -> Void {
+        var count = CountValue(newValue: 10)
+
+        let count_minus_one = count.minusOne()
+
+        XCTAssert(count_minus_one.value == 9)
+    }
+
+    func testCountObject_isMore() -> Void {
+        var count = CountValue(newValue: 10)
+
+        let newCount = count.plusOne()
+
+        XCTAssert(newCount.isMore)
+    }
+
+    func testCountObject_isLess() -> Void {
+        var count = CountValue(newValue: 10)
+
+        let newCount = count.minusOne()
+
+        XCTAssert(newCount.isLess)
+    }
+
 }

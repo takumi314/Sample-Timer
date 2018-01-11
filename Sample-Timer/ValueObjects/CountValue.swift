@@ -9,5 +9,52 @@
 import Foundation
 
 struct CountValue {
-    
+
+    // MRAK: - Public stored properties
+
+    var value: Int {
+        willSet {
+            self.oldValue = value
+        }
+    }
+
+    // MARK: - Public computed properties
+
+    var isMore: Bool {
+        get {
+            return value > oldValue
+        }
+    }
+
+    var isLess: Bool {
+        get {
+            return value < oldValue
+        }
+    }
+
+    // MARK: - Private properties
+
+    private var oldValue: Int
+
+    // MARK: - Initializer
+
+    init(newValue: Int = 10, oldValue: Int) {
+        self.value      = newValue
+        self.oldValue   = oldValue
+    }
+
+    init(newValue: Int = 10) {
+        self.init(newValue: newValue, oldValue: newValue)
+    }
+
+    // MARK: - Operation
+
+    mutating func plusOne() -> CountValue {
+        return CountValue(newValue: value + 1, oldValue: value)
+    }
+
+    mutating func minusOne() -> CountValue {
+        return CountValue(newValue: value - 1, oldValue: value)
+    }
+
 }
