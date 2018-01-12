@@ -13,11 +13,17 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet weak var displayLabel: UILabel!
-
+    @IBOutlet weak var countStepper: UIStepper!
+    
     // MARK: - Public properties
 
+    var counter: CountValue = CountValue(newValue: 10) {
+        didSet {
+            self.countStepper.value = Double(counter.value)
+        }
+    }
+
     var timer: Timer?
-    var count = 10
 
     // MARK: - Private properties
 
@@ -27,7 +33,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayLabel.text = String(count)
+
+        displayLabel.text = String(Int(counter.value))
+        configuration()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +45,13 @@ class ViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func stepperOnTapped(_ sender: UIStepper) {
+        print(sender.value)
+        counter.set(new: Int(sender.value))
+        if counter.isMore {
+            displayLabel.text = String(counter.value)
+        } else if counter.isLess {
+            displayLabel.text = String(counter.value)
+        }
     }
 
     @IBAction func onStarted(_ sender: UIButton) {
@@ -53,6 +68,13 @@ extension ViewController {
 
     // MARK: - Private methods
 
+    private func configuration() {
+        countStepper.value = Double(counter.value)
+        countStepper.minimumValue = 1
+        countStepper.maximumValue = 100
+        countStepper.stepValue = 1
+    }
+
     private func setTimer() {
         if let _ = timer {
             stopTimer()
@@ -62,16 +84,16 @@ extension ViewController {
                                      selector: #selector(onTimer),
                                      userInfo: nil,
                                      repeats: true)
-        displayLabel.text = String(count)
+        displayLabel.text = String(counter.value)
     }
 
     @objc private func onTimer() {
-        if count > 0 {
+        if counter.value > 0 {
             countDown()
-            displayLabel.text = String(count)
         } else {
             stopTimer()
         }
+        displayLabel.text = String(counter.value)
     }
 
     ///
@@ -83,17 +105,17 @@ extension ViewController {
     }
 
     private func setCount(count: Int) {
-        self.count = count
+        counter.set(new: count)
     }
 
     private func countUp() {
-        count += 1
+        counter = counter.plusOne()
     }
 
     private func countDown() {
-        if count < 1 {
+        if counter.value < 1 {
             return
         }
-        count -= 1
+        counter = counter.minusOne()
     }
 }
