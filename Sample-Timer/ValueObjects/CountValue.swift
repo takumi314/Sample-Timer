@@ -49,8 +49,8 @@ struct CountValue {
 
     // MARK: - Creation
 
-    func set(new newValue: Int) -> CountValue {
-        return  CountValue(newValue: newValue, oldValue: value)
+    mutating func set(new newValue: Int) {
+        self =  CountValue(newValue: newValue, oldValue: value)
     }
 
     // MARK: - Operation
