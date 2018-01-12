@@ -70,4 +70,17 @@ class Sample_TimerTests: XCTestCase {
         XCTAssert(newCount.isLess)
     }
 
+    func testCountObject_set() -> Void {
+        var count = CountValue(newValue: 10)
+
+        count = count.set(new: 11)
+
+        XCTAssert(count.value == 11)
+        XCTAssert(count.isMore)
+
+        count = count.set(new: 9)
+        XCTAssert(count.value == 9)
+        XCTAssert(count.isLess)
+    }
+
 }
