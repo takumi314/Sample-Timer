@@ -13,6 +13,7 @@
 		E115E0B92004FE5200B6BDE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E115E0B82004FE5200B6BDE3 /* Assets.xcassets */; };
 		E115E0BC2004FE5200B6BDE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115E0BA2004FE5200B6BDE3 /* LaunchScreen.storyboard */; };
 		E115E0C72004FE5200B6BDE3 /* Sample_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115E0C62004FE5200B6BDE3 /* Sample_TimerTests.swift */; };
+		E115E0D22007C78000B6BDE3 /* CountValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115E0D12007C77F00B6BDE3 /* CountValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E115E0C22004FE5200B6BDE3 /* Sample-TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample-TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E115E0C62004FE5200B6BDE3 /* Sample_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_TimerTests.swift; sourceTree = "<group>"; };
 		E115E0C82004FE5200B6BDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E115E0D12007C77F00B6BDE3 /* CountValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E115E0B02004FE5200B6BDE3 /* Sample-Timer */ = {
 			isa = PBXGroup;
 			children = (
+				E115E0D32007C7BD00B6BDE3 /* ValueObjects */,
 				E115E0B12004FE5200B6BDE3 /* AppDelegate.swift */,
 				E115E0B32004FE5200B6BDE3 /* ViewController.swift */,
 				E115E0B52004FE5200B6BDE3 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				E115E0C82004FE5200B6BDE3 /* Info.plist */,
 			);
 			path = "Sample-TimerTests";
+			sourceTree = "<group>";
+		};
+		E115E0D32007C7BD00B6BDE3 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E115E0D12007C77F00B6BDE3 /* CountValue.swift */,
+			);
+			path = ValueObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			files = (
 				E115E0B42004FE5200B6BDE3 /* ViewController.swift in Sources */,
 				E115E0B22004FE5200B6BDE3 /* AppDelegate.swift in Sources */,
+				E115E0D22007C78000B6BDE3 /* CountValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -78,6 +78,7 @@
                         <viewLayoutGuide key="safeArea" id="8KN-vt-PHG"/>
                     </view>
                     <connections>
+                        <outlet property="countStepper" destination="qIL-8u-ysW" id="sXg-gV-bIe"/>
                         <outlet property="displayLabel" destination="EmR-Un-LIf" id="XwV-Te-zfz"/>
                     </connections>
                 </viewController>
