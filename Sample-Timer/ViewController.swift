@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
     @IBAction func stepperOnTapped(_ sender: UIStepper) {
         print(sender.value)
-        counter = counter.set(new: Int(sender.value))
+        counter.set(new: Int(sender.value))
         if counter.isMore {
             displayLabel.text = String(counter.value)
         } else if counter.isLess {
@@ -105,7 +105,7 @@ extension ViewController {
     }
 
     private func setCount(count: Int) {
-        counter = counter.set(new: count)
+        counter.set(new: count)
     }
 
     private func countUp() {
