@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         displayLabel.text = String(Int(counter.value))
+        configuration()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +67,13 @@ class ViewController: UIViewController {
 extension ViewController {
 
     // MARK: - Private methods
+
+    private func configuration() {
+        countStepper.value = Double(counter.value)
+        countStepper.minimumValue = 1
+        countStepper.maximumValue = 100
+        countStepper.stepValue = 1
+    }
 
     private func setTimer() {
         if let _ = timer {
