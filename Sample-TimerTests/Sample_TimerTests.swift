@@ -41,44 +41,44 @@ class Sample_TimerTests: XCTestCase {
     func testCountObject_plus() -> Void {
         var count = CountValue(newValue: 10)
 
-        let count_plus_one = count.plusOne()
+        count.plusOne()
 
-        XCTAssert(count_plus_one.value == 11)
+        XCTAssert(count.value == 11)
     }
 
     func testCountObject_minus() -> Void {
         var count = CountValue(newValue: 10)
 
-        let count_minus_one = count.minusOne()
+        count.minusOne()
 
-        XCTAssert(count_minus_one.value == 9)
+        XCTAssert(count.value == 9)
     }
 
     func testCountObject_isMore() -> Void {
         var count = CountValue(newValue: 10)
 
-        let newCount = count.plusOne()
+        count.plusOne()
 
-        XCTAssert(newCount.isMore)
+        XCTAssert(count.isMore)
     }
 
     func testCountObject_isLess() -> Void {
         var count = CountValue(newValue: 10)
 
-        let newCount = count.minusOne()
+        count.minusOne()
 
-        XCTAssert(newCount.isLess)
+        XCTAssert(count.isLess)
     }
 
     func testCountObject_set() -> Void {
         var count = CountValue(newValue: 10)
 
-        count = count.set(new: 11)
+        count.set(new: 11)
 
         XCTAssert(count.value == 11)
         XCTAssert(count.isMore)
 
-        count = count.set(new: 9)
+        count.set(new: 9)
         XCTAssert(count.value == 9)
         XCTAssert(count.isLess)
     }

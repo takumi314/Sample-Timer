@@ -109,13 +109,13 @@ extension ViewController {
     }
 
     private func countUp() {
-        counter = counter.plusOne()
+        counter.plusOne()
     }
 
     private func countDown() {
         if counter.value < 1 {
             return
         }
-        counter = counter.minusOne()
+        counter.minusOne()
     }
 }

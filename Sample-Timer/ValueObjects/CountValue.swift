@@ -50,17 +50,17 @@ struct CountValue {
     // MARK: - Creation
 
     mutating func set(new newValue: Int) {
-        self =  CountValue(newValue: newValue, oldValue: value)
+        value = newValue
     }
 
     // MARK: - Operation
 
-    mutating func plusOne() -> CountValue {
-        return CountValue(newValue: value + 1, oldValue: value)
+    mutating func plusOne() {
+        value = value + 1
     }
 
-    mutating func minusOne() -> CountValue {
-        return CountValue(newValue: value - 1, oldValue: value)
+    mutating func minusOne() {
+        value = value - 1
     }
 
 }
